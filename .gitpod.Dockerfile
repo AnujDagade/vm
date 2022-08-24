@@ -1,4 +1,4 @@
 FROM gitpod/workspace-full-vnc
 
 RUN sudo apt-get update \
-    && sudo apt-get install cowsay -y
+    && sed -i 's/1920x1080/1280x720/' /usr/bin/start-vnc-session.sh
